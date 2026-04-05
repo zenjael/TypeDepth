@@ -1,0 +1,110 @@
+<!--
+  TypeDepth — Shared <head> Template
+  =====================================================
+  Copy this block into every new HTML page.
+  Replace all [PLACEHOLDER] values before publishing.
+  See DESIGN-SYSTEM.md and SITEMAP.md for guidance.
+  =====================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO: Core ═══ -->
+  <title>[PAGE TITLE] | TypeDepth</title>
+  <meta name="description" content="[UNIQUE PAGE DESCRIPTION — 150-160 characters. Describe this specific page's value.]" />
+  <link rel="canonical" href="https://typedepth.com/[PAGE-URL]" />
+
+  <!-- ═══ SEO: Open Graph (social sharing) ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="[PAGE TITLE] | TypeDepth" />
+  <meta property="og:description" content="[SAME AS META DESCRIPTION]" />
+  <meta property="og:url"         content="https://typedepth.com/[PAGE-URL]" />
+  <meta property="og:image"       content="https://typedepth.com/assets/og-image.png" />
+  <meta property="og:site_name"   content="TypeDepth" />
+
+  <!-- ═══ SEO: Twitter Card ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="[PAGE TITLE] | TypeDepth" />
+  <meta name="twitter:description" content="[SAME AS META DESCRIPTION]" />
+  <meta name="twitter:image"       content="https://typedepth.com/assets/og-image.png" />
+
+  <!-- ═══ SEO: JSON-LD Schema (added in Sprint 6) ═══ -->
+  <!--
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "[SchemaType]",
+    ...
+  }
+  </script>
+  -->
+
+  <!-- ═══ Fonts — always separate link tags ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet" />
+
+  <!-- ═══ Styles ═══ -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- ═══ Web Components ═══ -->
+  <script src="/components/nav-bar.js"     defer></script>
+  <script src="/components/site-footer.js" defer></script>
+  <!-- Add page-specific components below as needed -->
+  <!-- <script src="/components/type-card.js"        defer></script> -->
+  <!-- <script src="/components/function-stack.js"   defer></script> -->
+  <!-- <script src="/components/question-selector.js" defer></script> -->
+  <!-- <script src="/components/relationship-map.js" defer></script> -->
+  <!-- <script src="/components/compare-panel.js"    defer></script> -->
+
+</head>
+
+<!--
+  ═══════════════════════════════════════════════
+  BODY TEMPLATE — copy below into each page
+  ═══════════════════════════════════════════════
+
+  SEO CHECKLIST for every page:
+  ✅ One <h1> only — matches the page's primary intent
+  ✅ H1 → H2 → H3 hierarchy, never skip levels
+  ✅ Unique <title> and <meta name="description">
+  ✅ <link rel="canonical"> set correctly
+  ✅ All images have meaningful alt="" text
+  ✅ nav-bar active="" attribute set correctly
+  ✅ JSON-LD schema added (Sprint 6)
+  ═══════════════════════════════════════════════
+
+<body>
+
+  <nav-bar active="[home | explore | compare]"></nav-bar>
+
+  <main id="main-content">
+
+    <!-- H1 goes here — ONE per page, describes the page clearly -->
+    <section class="hero section-cream">
+      <div class="container">
+        <span class="text-eyebrow">[Handwriting label]</span>
+        <h1>[Page H1]</h1>
+        <p>[Supporting paragraph]</p>
+        <a href="[CTA URL]" class="btn btn-primary">[CTA text]</a>
+      </div>
+    </section>
+
+    <!-- Additional sections -->
+    <section class="section" aria-labelledby="section-heading-id">
+      <div class="container">
+        <span class="text-eyebrow">[Section label]</span>
+        <h2 id="section-heading-id">[Section H2]</h2>
+        ...
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer></site-footer>
+
+</body>
+-->

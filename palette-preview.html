@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeDepth — Font Options</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --indigo:   #1C1A5E;
+      --lime:     #C8D840;
+      --lavender: #D0C8FF;
+      --lilac:    #EAE4FF;
+      --cream:    #F5F0E4;
+    }
+
+    body {
+      background: #DEDAD4;
+      padding: 48px 20px 100px;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .page-header h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .page-header p {
+      font-family: 'Inter', sans-serif;
+      font-size: .85rem;
+      color: #aaa;
+    }
+
+    /* ── Block wrapper ── */
+    .font-block {
+      max-width: 880px;
+      margin: 0 auto 72px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.13);
+    }
+
+    /* ── Label bar ── */
+    .font-label {
+      background: var(--indigo);
+      color: #fff;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .font-label-name {
+      font-family: 'Inter', sans-serif;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+    .font-label-combo {
+      font-family: 'Inter', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      opacity: .9;
+    }
+
+    /* ── Nav ── */
+    .sim-nav {
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 36px;
+    }
+    .sim-nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--indigo);
+    }
+    .sim-nav-cta {
+      background: var(--indigo);
+      color: #fff;
+      font-size: .76rem;
+      font-weight: 600;
+      padding: 9px 22px;
+      border-radius: 22px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ── Hero ── */
+    .sim-hero {
+      background: var(--cream);
+      text-align: center;
+      padding: 48px 40px 36px;
+    }
+    .sim-eyebrow {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--indigo);
+      opacity: .55;
+    }
+    .sim-h1 {
+      color: var(--indigo);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .sim-body {
+      font-family: 'Inter', sans-serif;
+      font-size: .88rem;
+      line-height: 1.75;
+      color: var(--indigo);
+      opacity: .7;
+      max-width: 440px;
+      margin: 0 auto 26px;
+    }
+    .sim-cta {
+      background: var(--lime);
+      color: var(--indigo);
+      font-family: 'Inter', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      padding: 12px 32px;
+      border-radius: 28px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ── Cards section ── */
+    .sim-section {
+      background: var(--lilac);
+      padding: 40px 32px 48px;
+    }
+    .sim-section-eyebrow {
+      display: block;
+      text-align: center;
+      color: var(--indigo);
+      opacity: .5;
+      margin-bottom: 6px;
+    }
+    .sim-section-title {
+      text-align: center;
+      color: var(--indigo);
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: 22px;
+      padding: 26px 20px 22px;
+    }
+    .card-lime   { background: var(--lime); }
+    .card-lav    { background: var(--lavender); }
+    .card-cream  { background: var(--cream); }
+
+    .card-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      color: var(--indigo);
+      opacity: .65;
+      margin-bottom: 8px;
+    }
+    .card-func {
+      color: var(--indigo);
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .card-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: .78rem;
+      line-height: 1.65;
+      color: var(--indigo);
+      opacity: .8;
+      margin-bottom: 20px;
+    }
+    .card-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: .74rem;
+      font-weight: 700;
+      padding: 9px 22px;
+      border-radius: 22px;
+      border: none;
+      cursor: pointer;
+    }
+    .card-lime  .card-btn { background: var(--indigo); color: #fff; }
+    .card-lav   .card-btn { background: var(--lime);   color: var(--indigo); }
+    .card-cream .card-btn { background: var(--indigo); color: #fff; }
+
+
+    /* ══════════════════
+       OPTION 1 — Lato
+    ══════════════════ */
+    .opt1 .sim-nav-logo     { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 1.05rem; color: var(--indigo); }
+    .opt1 .sim-nav-links    { font-family: 'Inter', sans-serif; }
+    .opt1 .sim-nav-cta      { font-family: 'Inter', sans-serif; }
+    .opt1 .sim-eyebrow      { font-family: 'Nothing You Could Do', cursive; font-size: 1.45rem; -webkit-text-stroke: 0.5px var(--indigo); }
+    .opt1 .sim-h1           { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 2rem; }
+    .opt1 .sim-section-eyebrow { font-family: 'Nothing You Could Do', cursive; font-size: 1.35rem; -webkit-text-stroke: 0.5px var(--indigo); }
+    .opt1 .sim-section-title   { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 1.9rem; }
+    .opt1 .card-func           { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 2rem; }
+
+    /* ══════════════════
+       OPTION 2 — Lexend
+    ══════════════════ */
+    .opt2 .sim-nav-logo     { font-family: 'Lexend', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--indigo); }
+    .opt2 .sim-nav-links    { font-family: 'Inter', sans-serif; }
+    .opt2 .sim-nav-cta      { font-family: 'Inter', sans-serif; }
+    .opt2 .sim-eyebrow      { font-family: 'Nothing You Could Do', cursive; font-size: 1.45rem; }
+    .opt2 .sim-h1           { font-family: 'Lexend', sans-serif; font-weight: 800; font-size: 2rem; }
+    .opt2 .sim-section-eyebrow { font-family: 'Nothing You Could Do', cursive; font-size: 1.35rem; }
+    .opt2 .sim-section-title   { font-family: 'Lexend', sans-serif; font-weight: 800; font-size: 1.9rem; }
+    .opt2 .card-func           { font-family: 'Lexend', sans-serif; font-weight: 800; font-size: 2rem; }
+
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>TypeDepth — Design System Locked</h1>
+    <p>Lato 900 · Inter · Nothing You Could Do &nbsp;|&nbsp; Indigo · Lime · Lavender · Soft Lilac · Cream</p>
+  </div>
+
+
+  <!-- ══ FINAL — Lato · Inter · Nothing You Could Do ══ -->
+  <div class="font-block opt1">
+    <div class="font-label">
+      <span class="font-label-name">Design System · Final</span>
+      <span class="font-label-combo">Lato &nbsp;·&nbsp; Inter &nbsp;·&nbsp; Nothing You Could Do</span>
+    </div>
+
+    <nav class="sim-nav">
+      <span class="sim-nav-logo">TypeDepth</span>
+      <div class="sim-nav-links">
+        <span>Home</span><span>Explore</span><span>Compare</span><span>Community</span>
+      </div>
+      <button class="sim-nav-cta">Find My Type</button>
+    </nav>
+
+    <div class="sim-hero">
+      <span class="sim-eyebrow">Know Yourself Deeper</span>
+      <div class="sim-h1">You Are More Than Your 4 Letters</div>
+      <div class="sim-body">Explore the 8 cognitive functions that drive how you think, feel, and connect — and why you sometimes get stuck in loops.</div>
+      <button class="sim-cta">Explore Your Type →</button>
+    </div>
+
+    <div class="sim-section">
+      <span class="sim-section-eyebrow">Your Function Stack</span>
+      <div class="sim-section-title">What Makes You, You</div>
+      <div class="cards">
+        <div class="card card-lime">
+          <div class="card-tag">Dominant Function</div>
+          <div class="card-func">Fi</div>
+          <div class="card-desc">Introverted Feeling — deep personal values that guide every decision you make.</div>
+          <button class="card-btn">Learn More</button>
+        </div>
+        <div class="card card-lav">
+          <div class="card-tag">Auxiliary Function</div>
+          <div class="card-func">Ne</div>
+          <div class="card-desc">Extraverted Intuition — a mind that sees endless possibilities and connections.</div>
+          <button class="card-btn">Learn More</button>
+        </div>
+        <div class="card card-cream">
+          <div class="card-tag">Tertiary Function</div>
+          <div class="card-func">Si</div>
+          <div class="card-desc">Introverted Sensing — comfort in memory, familiarity, and personal history.</div>
+          <button class="card-btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="text-align:center; font-family:'Inter',sans-serif; font-size:.8rem; color:#aaa; line-height:2; margin-top: 16px;">
+    <p>Palette · #1C1A5E · #C8D840 · #D0C8FF · #EAE4FF · #F5F0E4</p>
+  </div>
+
+</body>
+</html>

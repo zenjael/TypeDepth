@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO: Core ═══ -->
+  <title>Explore All 16 MBTI Types | TypeDepth</title>
+  <meta name="description" content="Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance." />
+  <link rel="canonical" href="https://typedepth.com/explore.html" />
+
+  <!-- ═══ SEO: Open Graph ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Explore All 16 MBTI Types | TypeDepth" />
+  <meta property="og:description" content="Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance." />
+  <meta property="og:url"         content="https://typedepth.com/explore.html" />
+  <meta property="og:image"       content="https://typedepth.com/assets/og-image.png" />
+  <meta property="og:site_name"   content="TypeDepth" />
+
+  <!-- ═══ SEO: Twitter Card ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Explore All 16 MBTI Types | TypeDepth" />
+  <meta name="twitter:description" content="Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance." />
+  <meta name="twitter:image"       content="https://typedepth.com/assets/og-image.png" />
+
+  <!-- ═══ SEO: JSON-LD Schema (added in Sprint 6) ═══ -->
+  <!--
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Explore All 16 MBTI Types",
+    "url": "https://typedepth.com/explore.html"
+  }
+  </script>
+  -->
+
+  <!-- ═══ Fonts ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet" />
+
+  <!-- ═══ Styles ═══ -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- ═══ Web Components (wired up after static pass is approved) ═══ -->
+  <!-- <script src="/components/nav-bar.js"      defer></script> -->
+  <!-- <script src="/components/site-footer.js"  defer></script> -->
+  <!-- <script src="/components/type-card.js"    defer></script> -->
+  <!-- <script src="/components/relationship-map.js" defer></script> -->
+</head>
+<body>
+
+  <!-- Navigation — static HTML; swap for <nav-bar active="explore"> after approval -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="/index.html" class="nav-logo" aria-label="TypeDepth home">TypeDepth</a>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/explore.html" class="active">Explore</a>
+      <a href="/compare.html">Compare</a>
+    </div>
+    <a href="/compare.html" class="btn nav-cta">Compare Types</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ════════════════════════════════════════════
+         Section 1 — Page Header
+         ════════════════════════════════════════════ -->
+    <section class="hero hero-compact" aria-labelledby="explore-heading">
+      <div class="container">
+        <span class="text-eyebrow">All 16 Types</span>
+        <h1 id="explore-heading">Explore All 16 MBTI Types</h1>
+        <p>Every type has a unique cognitive function stack that shapes how they think, decide, and grow. Select any type to go deeper.</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         Section 2 — 16-Type Grid
+         ════════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="type-grid-heading">
+      <div class="container">
+
+        <h2 id="type-grid-heading" class="sr-only">All 16 MBTI types</h2>
+
+        <div class="explore-type-grid">
+
+          <!-- NF — Idealists -->
+          <a href="/types/infp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Fi</span>
+            <span class="explore-type-code">INFP</span>
+            <span class="explore-type-name">The Mediator</span>
+            <span class="explore-type-tagline">Quietly idealistic, fiercely authentic</span>
+          </a>
+          <a href="/types/infj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Ni</span>
+            <span class="explore-type-code">INFJ</span>
+            <span class="explore-type-name">The Advocate</span>
+            <span class="explore-type-tagline">Visionary, private, driven by meaning</span>
+          </a>
+          <a href="/types/enfp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Ne</span>
+            <span class="explore-type-code">ENFP</span>
+            <span class="explore-type-name">The Campaigner</span>
+            <span class="explore-type-tagline">Imaginative, energetic, people-centred</span>
+          </a>
+          <a href="/types/enfj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Fe</span>
+            <span class="explore-type-code">ENFJ</span>
+            <span class="explore-type-name">The Protagonist</span>
+            <span class="explore-type-tagline">Warm, decisive, naturally inspiring</span>
+          </a>
+
+          <!-- NT — Analysts -->
+          <a href="/types/intp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Ti</span>
+            <span class="explore-type-code">INTP</span>
+            <span class="explore-type-name">The Logician</span>
+            <span class="explore-type-tagline">Precise, curious, frameworks for everything</span>
+          </a>
+          <a href="/types/intj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Ni</span>
+            <span class="explore-type-code">INTJ</span>
+            <span class="explore-type-name">The Architect</span>
+            <span class="explore-type-tagline">Strategic, independent, relentlessly improving</span>
+          </a>
+          <a href="/types/entp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Ne</span>
+            <span class="explore-type-code">ENTP</span>
+            <span class="explore-type-name">The Debater</span>
+            <span class="explore-type-tagline">Quick, contrarian, ideas over feelings</span>
+          </a>
+          <a href="/types/entj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Te</span>
+            <span class="explore-type-code">ENTJ</span>
+            <span class="explore-type-name">The Commander</span>
+            <span class="explore-type-tagline">Bold, structured, built to lead</span>
+          </a>
+
+          <!-- SJ — Guardians -->
+          <a href="/types/isfj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Si</span>
+            <span class="explore-type-code">ISFJ</span>
+            <span class="explore-type-name">The Defender</span>
+            <span class="explore-type-tagline">Reliable, caring, quietly dedicated</span>
+          </a>
+          <a href="/types/istj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Si</span>
+            <span class="explore-type-code">ISTJ</span>
+            <span class="explore-type-name">The Logistician</span>
+            <span class="explore-type-tagline">Thorough, dutiful, trust through consistency</span>
+          </a>
+          <a href="/types/esfj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Fe</span>
+            <span class="explore-type-code">ESFJ</span>
+            <span class="explore-type-name">The Consul</span>
+            <span class="explore-type-tagline">Sociable, supportive, harmony-first</span>
+          </a>
+          <a href="/types/estj.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Te</span>
+            <span class="explore-type-code">ESTJ</span>
+            <span class="explore-type-name">The Executive</span>
+            <span class="explore-type-tagline">Organised, direct, gets things done</span>
+          </a>
+
+          <!-- SP — Explorers -->
+          <a href="/types/isfp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Fi</span>
+            <span class="explore-type-code">ISFP</span>
+            <span class="explore-type-name">The Adventurer</span>
+            <span class="explore-type-tagline">Gentle, sensory, lives in the moment</span>
+          </a>
+          <a href="/types/istp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Ti</span>
+            <span class="explore-type-code">ISTP</span>
+            <span class="explore-type-name">The Virtuoso</span>
+            <span class="explore-type-tagline">Hands-on, cool-headed, masterful</span>
+          </a>
+          <a href="/types/esfp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Se</span>
+            <span class="explore-type-code">ESFP</span>
+            <span class="explore-type-name">The Entertainer</span>
+            <span class="explore-type-tagline">Spontaneous, fun, fully present</span>
+          </a>
+          <a href="/types/estp.html" class="explore-type-card">
+            <span class="explore-type-function-badge">Se</span>
+            <span class="explore-type-code">ESTP</span>
+            <span class="explore-type-name">The Entrepreneur</span>
+            <span class="explore-type-tagline">Action-first, perceptive, thrives under pressure</span>
+          </a>
+
+        </div>
+
+        <p class="explore-compare-cta text-center mt-2xl">
+          Want to see two types side by side?
+          <a href="/compare.html" class="link-underline">Compare any two MBTI types</a>.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         Section 3 — Relationship Map
+         ════════════════════════════════════════════ -->
+    <section class="section section-bg-lilac" aria-labelledby="relation-heading">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="text-eyebrow">How Types Connect</span>
+          <h2 id="relation-heading">Relationship Compatibility</h2>
+          <p class="section-lead">Cognitive functions shape how types relate to each other. Some pairs flow easily — others create growth through friction.</p>
+        </div>
+
+        <!-- Tab bar — JS toggle wired up in next pass -->
+        <div class="relation-tabs mt-2xl" role="tablist" aria-label="Relationship type">
+          <button class="relation-tab relation-tab-active" role="tab" aria-selected="true"  aria-controls="tab-friendship">Friendship</button>
+          <button class="relation-tab"                    role="tab" aria-selected="false" aria-controls="tab-work">Work</button>
+          <button class="relation-tab"                    role="tab" aria-selected="false" aria-controls="tab-romance">Romance</button>
+        </div>
+
+        <!-- Tab panel: Friendship (visible by default) -->
+        <div class="relation-panel" id="tab-friendship" role="tabpanel" aria-labelledby="tab-friendship">
+
+          <div class="relation-group-grid mt-2xl">
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">NF — The Idealists</h3>
+              <p class="relation-group-body">NF types connect through shared values and meaning. Friendships form fast and run deep — sometimes too intense for other temperaments.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">INFP</span>
+                <span class="type-badge">INFJ</span>
+                <span class="type-badge">ENFP</span>
+                <span class="type-badge">ENFJ</span>
+              </div>
+              <p class="relation-group-note">Pair well with: NF + NT for intellectual depth · NF + NF for emotional resonance</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">NT — The Analysts</h3>
+              <p class="relation-group-body">NT friendships are built on ideas and mutual respect for competence. They love a good debate and don't need constant contact to maintain closeness.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">INTP</span>
+                <span class="type-badge">INTJ</span>
+                <span class="type-badge">ENTP</span>
+                <span class="type-badge">ENTJ</span>
+              </div>
+              <p class="relation-group-note">Pair well with: NT + NF for inspiration · NT + NT for intellectual sparring</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">SJ — The Guardians</h3>
+              <p class="relation-group-body">SJ friendships are steady and dependable. They show care through action — remembering details, showing up, following through. Loyalty is everything.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">ISFJ</span>
+                <span class="type-badge">ISTJ</span>
+                <span class="type-badge">ESFJ</span>
+                <span class="type-badge">ESTJ</span>
+              </div>
+              <p class="relation-group-note">Pair well with: SJ + SP for shared groundedness · SJ + NF for balance of warmth</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">SP — The Explorers</h3>
+              <p class="relation-group-body">SP friendships are energetic and present. They bond through doing things together — adventure, craft, experience. They don't overthink relationships.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">ISFP</span>
+                <span class="type-badge">ISTP</span>
+                <span class="type-badge">ESFP</span>
+                <span class="type-badge">ESTP</span>
+              </div>
+              <p class="relation-group-note">Pair well with: SP + SJ for stability and fun · SP + NT for challenge and play</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab panel: Work (hidden — toggled by JS in next pass) -->
+        <div class="relation-panel relation-panel-hidden" id="tab-work" role="tabpanel" aria-labelledby="tab-work">
+          <p class="relation-panel-placeholder text-center mt-2xl">Work compatibility view — powered by the relationship-map component.</p>
+        </div>
+
+        <!-- Tab panel: Romance (hidden — toggled by JS in next pass) -->
+        <div class="relation-panel relation-panel-hidden" id="tab-romance" role="tabpanel" aria-labelledby="tab-romance">
+          <p class="relation-panel-placeholder text-center mt-2xl">Romance compatibility view — powered by the relationship-map component.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer — static HTML; swap for <site-footer> after approval -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-logo">TypeDepth</p>
+      <p class="footer-tagline">Go beyond your 4 letters. Understand the 8 cognitive functions that make you who you are.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/index.html">Home</a>
+        <a href="/explore.html">Explore Types</a>
+        <a href="/compare.html">Compare Types</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 TypeDepth. Built for learning.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
