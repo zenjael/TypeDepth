@@ -540,7 +540,8 @@ p {
   content: '';
   display: block;
   width: 100%;
-  height: var(--hero-brain-room);
+  /* Matches .hero-mascot translateY — keeps layout strip in sync with brain offset */
+  height: calc(var(--hero-brain-room) - 4rem);
   background-color: var(--color-lilac);
 }
 
@@ -604,14 +605,14 @@ p {
 }
 
 .hero-mascot {
-  max-width: min(100%, 680px);
+  max-width: min(100%, 820px);
   max-height: 100%;
   width: 100%;
   margin: 0 auto;
   color: var(--color-primary);
   flex-shrink: 1;
   min-height: 0;
-  transform: translateY(var(--hero-brain-room));
+  transform: translateY(calc(var(--hero-brain-room) - 4rem));
 }
 
 .hero-brain-img {
@@ -856,7 +857,7 @@ p {
   .hero-headline-cluster span.hero-sticker:nth-of-type(4) { left: 84%; }
 
   .hero--duck-lime::after {
-    height: var(--hero-brain-room-mobile);
+    height: calc(var(--hero-brain-room-mobile) - 4rem);
   }
 
   .hero--duck-lime-content {
@@ -865,8 +866,8 @@ p {
   }
 
   .hero-mascot {
-    max-width: min(100%, 560px);
-    transform: translateY(var(--hero-brain-room-mobile));
+    max-width: min(100%, 700px);
+    transform: translateY(calc(var(--hero-brain-room-mobile) - 4rem));
   }
 
   .cards-grid { grid-template-columns: 1fr; }
