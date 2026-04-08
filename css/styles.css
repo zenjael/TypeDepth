@@ -311,6 +311,47 @@ p {
   margin: var(--space-lg) auto 0;
 }
 
+/* Placeholder pages (e.g. Commits — coming soon) */
+.page-coming-soon {
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-xl);
+  background-color: var(--color-white);
+  border-radius: var(--radius-card);
+  border: 2px solid rgba(28, 26, 94, 0.08);
+  box-shadow: 0 4px 0 rgba(28, 26, 94, 0.05);
+  text-align: center;
+}
+
+.section-cream .page-coming-soon {
+  border-color: rgba(28, 26, 94, 0.1);
+}
+
+.page-coming-soon__eyebrow {
+  font-family: var(--font-handwriting);
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.8;
+  margin: 0 0 var(--space-sm);
+}
+
+.page-coming-soon__title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-md);
+}
+
+.page-coming-soon__text {
+  font-size: var(--text-base);
+  color: var(--color-primary);
+  opacity: 0.78;
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* Type detail pages: eyebrow + h2 blocks (no .section-header wrapper) */
 .section > .container > .text-eyebrow + h2 {
   text-wrap: balance;
