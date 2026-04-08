@@ -304,67 +304,45 @@ p {
 .page-header__dek {
   font-size: var(--text-xl);
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-primary);
-  opacity: 0.85;
+  opacity: 0.75;
   max-width: min(50ch, 42rem);
   margin: var(--space-lg) auto 0;
 }
 
-/* Compare page — coming soon (lavender → lilac cloud + CTA) */
+/* Compare page — coming soon */
 .compare-soon-section {
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-3xl);
+  background-color: var(--color-cream);
+  overflow: hidden;
 }
 
-.compare-soon {
+.compare-soon-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 24rem;
-  margin: 0 auto;
-}
-
-.compare-soon-cloud {
+  padding: 150px var(--space-md) 0;
   position: relative;
-  width: min(100%, 20rem);
-  height: 10.5rem;
-  margin: 0 auto var(--space-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 2;
 }
 
-.compare-soon-cloud__svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 10px 28px rgba(28, 26, 94, 0.12));
-}
-
-.compare-soon-cloud__title {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  padding: 0 var(--space-md);
+.compare-soon__title {
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: clamp(var(--text-lg), 2.5vw, var(--text-xl));
+  font-size: clamp(var(--text-4xl), 5vw + 1rem, var(--text-6xl));
   color: var(--color-primary);
+  margin: 0 0 var(--space-md);
   letter-spacing: -0.02em;
-  text-shadow: 0 1px 0 rgba(251, 249, 236, 0.5);
 }
 
-.compare-soon__hint {
+.compare-soon__sub {
   font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 500;
+  font-size: var(--text-base);
+  font-weight: 400;
   color: var(--color-primary);
-  opacity: 0.58;
-  margin: 0 0 var(--space-lg);
-  line-height: 1.45;
+  opacity: 0.48;
+  margin: 0 0 var(--space-xl);
 }
 
 .compare-soon__cta {
@@ -372,6 +350,21 @@ p {
   font-size: var(--text-sm);
   min-height: 2.75rem;
   padding: 0.6rem 1.5rem;
+}
+
+.compare-soon-hands {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.compare-soon-hands__img {
+  display: block;
+  width: min(170vw, 1500px);
+  max-width: none;
+  height: auto;
+  margin-bottom: -50px;
 }
 
 /* Type detail pages: eyebrow + h2 blocks (no .section-header wrapper) */
