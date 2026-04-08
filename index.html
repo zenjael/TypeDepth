@@ -54,7 +54,11 @@
   <!-- Navigation — static HTML; swap for <nav-bar active="home"> after approval -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/index.html" class="nav-logo" aria-label="TypeDepth home">TypeDepth</a>
-    <div class="nav-links">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </label>
+    <div class="nav-links" id="primary-nav">
       <a href="/index.html" class="active">Home</a>
       <a href="/explore.html">Explore</a>
       <a href="/compare.html">Compare</a>
@@ -68,18 +72,20 @@
          Section 1 — Hero
          ════════════════════════════════════════════ -->
     <section class="hero hero--duck" aria-labelledby="hero-heading">
-      <div class="container hero--duck-cream">
-        <span class="text-eyebrow">Know Yourself Deeper</span>
+      <div class="hero--duck-cream">
         <div class="hero-headline-cluster">
-          <h1 id="hero-heading">You Are More Than<br />Your 4 Letters</h1>
-          <span class="hero-sticker" style="--rot: -16deg; --x: -2%; --y: 4%;">Ti-Ne</span>
-          <span class="hero-sticker" style="--rot: 12deg; --x: 102%; --y: 10%;">Fi-Se</span>
-          <span class="hero-sticker" style="--rot: -7deg; --x: 8%; --y: 38%;">Ni-Te</span>
-          <span class="hero-sticker" style="--rot: 19deg; --x: 92%; --y: 44%;">Fe-Ni</span>
-          <span class="hero-sticker" style="--rot: -12deg; --x: -3%; --y: 62%;">Si-Fe</span>
-          <span class="hero-sticker" style="--rot: 8deg; --x: 98%; --y: 68%;">Se-Ti</span>
-          <span class="hero-sticker" style="--rot: -4deg; --x: 18%; --y: 92%;">Ne-Fi</span>
-          <span class="hero-sticker" style="--rot: 15deg; --x: 84%; --y: 88%;">Te-Si</span>
+          <h1 id="hero-heading">You Are<br />More Than<br />Your 4 Letters</h1>
+          <span class="hero-sticker" style="--rot: -14deg; --x: 13%; --y: 4%;">INFP</span>
+          <span class="hero-sticker" style="--rot: 18deg; --x: 18%; --y: 58%;">INFJ</span>
+          <span class="hero-sticker" style="--rot: 12deg; --x: 85%; --y: 10%;">ENFP</span>
+          <span class="hero-sticker" style="--rot: -16deg; --x: calc(72% + 10px); --y: 42%;">ENFJ</span>
+          <span class="hero-sticker" style="--rot: 17deg; --x: 79%; --y: 66%;">INTP</span>
+          <span class="hero-sticker" style="--rot: -8deg; --x: calc(26% + 20px); --y: 16%;">INTJ</span>
+          <span class="hero-sticker" style="--rot: 13deg; --x: calc(64% + 40px); --y: 12%;">ENTP</span>
+          <span class="hero-sticker" style="--rot: -12deg; --x: 11%; --y: 80%;">ENTJ</span>
+          <span class="hero-sticker" style="--rot: -5deg; --x: 42%; --y: 94%;">ISFJ</span>
+          <span class="hero-sticker" style="--rot: 14deg; --x: calc(87% + 20px); --y: 95%;">ISTJ</span>
+          <span class="hero-sticker" style="--rot: 10deg; --x: calc(59% + 40px); --y: 18%;">ESFJ</span>
         </div>
       </div>
       <div class="hero--duck-lime">
@@ -101,26 +107,26 @@
     <!-- ════════════════════════════════════════════
          Section 2 — Why Cognitive Functions Matter
          ════════════════════════════════════════════ -->
-    <section class="section section--lime" aria-labelledby="why-heading">
+    <section class="section section--hero-lilac" aria-labelledby="why-heading">
       <div class="container">
 
         <div class="hero-followup text-center">
-          <p class="section-lead hero-followup-lead">Most people stop at INFP or ENTJ. But your real self lives in the 8 cognitive functions beneath those letters — and that's where it gets interesting.</p>
+          <p class="section-lead hero-followup-lead">Most people stop at their MBTI type — INFJ, ENTJ, or any of the 16 four-letter codes. Your real self lives in the 8 cognitive functions beneath those letters — and that's where it gets interesting.</p>
           <a href="/explore.html" class="btn btn-dark">Explore the 16 Types</a>
         </div>
 
-        <div class="section-header text-center mt-3xl">
+        <div class="section-header text-center section-header--after-hero-followup">
           <span class="text-eyebrow">Beyond the Labels</span>
           <h2 id="why-heading">Your 4-Letter Type Is Just the Beginning</h2>
-          <p class="section-lead">Knowing you're an INFP tells you what. Cognitive functions tell you how, why, and what happens when you're pushed to your limits.</p>
+          <p class="section-lead">Knowing you're an INFJ tells you what. Cognitive functions tell you how, why, and what happens when you're pushed to your limits.</p>
         </div>
 
         <div class="cards-grid mt-2xl">
 
           <div class="card card-lime">
             <div class="card-doodle" aria-hidden="true">
-              <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h20l6 8v24a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"/><path d="M22 8V4h8v4"/><path d="M10 20h28"/><circle cx="24" cy="30" r="2" fill="currentColor"/></svg>
+              <span class="doodle-icon doodle-icon--illustration">
+                <img src="/img/oneyou.svg" width="104" height="104" alt="" decoding="async" />
               </span>
             </div>
             <p class="card-tag">The Problem</p>
@@ -131,8 +137,8 @@
 
           <div class="card card-lav">
             <div class="card-doodle" aria-hidden="true">
-              <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 36l8-16 8 10 8-22 8 14 8-10"/><circle cx="8" cy="36" r="2.5" fill="currentColor"/><circle cx="16" cy="20" r="2.5" fill="currentColor"/><circle cx="24" cy="30" r="2.5" fill="currentColor"/><circle cx="32" cy="8" r="2.5" fill="currentColor"/><circle cx="40" cy="22" r="2.5" fill="currentColor"/></svg>
+              <span class="doodle-icon doodle-icon--illustration">
+                <img src="/img/8you.svg" width="104" height="104" alt="" decoding="async" />
               </span>
             </div>
             <p class="card-tag">The Map</p>
@@ -143,8 +149,8 @@
 
           <div class="card card-lav">
             <div class="card-doodle" aria-hidden="true">
-              <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6v8"/><path d="M24 34v8"/><path d="M10 24h8"/><path d="M30 24h8"/><circle cx="24" cy="24" r="10"/><path d="M18 32c4 4 10 4 14 0"/></svg>
+              <span class="doodle-icon doodle-icon--illustration">
+                <img src="/img/askqs.svg" width="104" height="104" alt="" decoding="async" />
               </span>
             </div>
             <p class="card-tag">The Payoff</p>
@@ -208,7 +214,7 @@
 
         <p class="framework-note text-center mt-2xl">
           Each type has a dominant function that colours everything — and an inferior that surfaces when you're at your worst.
-          <a href="/explore.html" class="framework-note-link">See how it maps to all 16 types</a>.
+          <a href="/explore.html" class="framework-note-link">See how it maps to all 16 types.</a>
         </p>
 
       </div>
@@ -220,15 +226,18 @@
     <section class="section" aria-labelledby="benefits-heading">
       <div class="container">
 
-        <span class="text-eyebrow">What You'll Discover</span>
-        <h2 id="benefits-heading">See Yourself More Clearly</h2>
+        <div class="section-header text-center">
+          <span class="text-eyebrow">What You'll Discover</span>
+          <h2 id="benefits-heading">See Yourself More Clearly</h2>
+        </div>
 
+        <!-- Benefit icons: Heroicons 24/outline — eye, exclamation-triangle, arrow-path, arrow-right -->
         <div class="benefits-list mt-2xl">
 
           <div class="benefit-item">
             <div class="benefit-icon-wrap" aria-hidden="true">
               <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="10"/><path d="M14 24h-4"/><path d="M38 24h-4"/><path d="M24 14v-4"/><path d="M24 38v-4"/><path d="M17 17l-3-3"/><path d="M34 34l-3-3"/><path d="M31 17l3-3"/><path d="M14 34l3-3"/></svg>
+                <svg class="icon-outline" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
               </span>
             </div>
             <div class="benefit-content">
@@ -240,7 +249,7 @@
           <div class="benefit-item">
             <div class="benefit-icon-wrap" aria-hidden="true">
               <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 32c4-12 12-18 24-18 8 0 14 4 18 10"/><path d="M14 38c2-8 8-12 16-12 6 0 10 3 12 8"/><path d="M22 12l4-6 4 6"/><path d="M24 12v6"/></svg>
+                <svg class="icon-outline" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg>
               </span>
             </div>
             <div class="benefit-content">
@@ -252,7 +261,7 @@
           <div class="benefit-item">
             <div class="benefit-icon-wrap" aria-hidden="true">
               <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 28c0-8 6-14 14-14h4"/><path d="M36 20v12c0 8-6 14-14 14h-4"/><path d="M30 12l6-6 6 6"/><path d="M18 36l-6 6-6-6"/></svg>
+                <svg class="icon-outline" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
               </span>
             </div>
             <div class="benefit-content">
@@ -264,7 +273,7 @@
           <div class="benefit-item">
             <div class="benefit-icon-wrap" aria-hidden="true">
               <span class="doodle-icon">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38c8-4 14-12 18-22"/><path d="M14 10c6 10 14 18 26 22"/><circle cx="8" cy="38" r="3" fill="currentColor"/><circle cx="14" cy="10" r="3" fill="currentColor"/><path d="M32 8l8 4-4 8"/></svg>
+                <svg class="icon-outline" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
               </span>
             </div>
             <div class="benefit-content">
@@ -372,15 +381,27 @@
 
   <!-- Footer — static HTML; swap for <site-footer> after approval -->
   <footer class="footer" role="contentinfo">
-    <div class="container">
-      <p class="footer-logo">TypeDepth</p>
-      <p class="footer-tagline">Go beyond your 4 letters. Understand the 8 cognitive functions that make you who you are.</p>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/index.html">Home</a>
-        <a href="/explore.html">Explore Types</a>
-        <a href="/compare.html">Compare Types</a>
-      </nav>
-      <p class="footer-copy">&copy; 2025 TypeDepth. Built for learning.</p>
+    <div class="container footer-inner">
+      <div class="footer-col footer-col--brand">
+        <p class="footer-logo">TypeDepth</p>
+        <p class="footer-tagline">Go beyond your 4 letters. Understand the 8 cognitive functions that make you who you are.</p>
+        <address class="footer-address">
+          TypeDepth<br />
+          1 Promise Land Boulevard<br />
+          Heaven · Bethlehem · JC 777
+        </address>
+        <p class="footer-phone">
+          <a href="tel:+6525377968" class="footer-phone-link">+65 BLESSYOU</a>
+        </p>
+      </div>
+      <div class="footer-col footer-col--links">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="/index.html">Home</a>
+          <a href="/explore.html">Explore Types</a>
+          <a href="/compare.html">Compare Types</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 TypeDepth. Built for learning.</p>
+      </div>
     </div>
   </footer>
 

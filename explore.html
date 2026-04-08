@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO: Core ═══ -->
-  <title>Explore All 16 MBTI Types | TypeDepth</title>
+  <title>What is a cognitive function stack? | TypeDepth</title>
   <meta name="description" content="Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance." />
   <link rel="canonical" href="https://typedepth.com/explore.html" />
 
   <!-- ═══ SEO: Open Graph ═══ -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Explore All 16 MBTI Types | TypeDepth" />
+  <meta property="og:title"       content="What is a cognitive function stack? | TypeDepth" />
   <meta property="og:description" content="Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance." />
   <meta property="og:url"         content="https://typedepth.com/explore.html" />
   <meta property="og:image"       content="https://typedepth.com/assets/og-image.png" />
@@ -19,7 +19,7 @@
 
   <!-- ═══ SEO: Twitter Card ═══ -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Explore All 16 MBTI Types | TypeDepth" />
+  <meta name="twitter:title"       content="What is a cognitive function stack? | TypeDepth" />
   <meta name="twitter:description" content="Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance." />
   <meta name="twitter:image"       content="https://typedepth.com/assets/og-image.png" />
 
@@ -56,7 +56,11 @@
   <!-- Navigation — static HTML; swap for <nav-bar active="explore"> after approval -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/index.html" class="nav-logo" aria-label="TypeDepth home">TypeDepth</a>
-    <div class="nav-links">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </label>
+    <div class="nav-links" id="primary-nav">
       <a href="/index.html">Home</a>
       <a href="/explore.html" class="active">Explore</a>
       <a href="/compare.html">Compare</a>
@@ -66,26 +70,155 @@
 
   <main id="main-content">
 
-    <!-- ════════════════════════════════════════════
-         Section 1 — Page Header
-         ════════════════════════════════════════════ -->
-    <section class="hero hero-compact" aria-labelledby="explore-heading">
+    <!-- Inner page masthead — cream band, title, short dek -->
+    <header class="page-header page-header--center">
       <div class="container">
-        <span class="text-eyebrow">All 16 Types</span>
-        <h1 id="explore-heading">Explore All 16 MBTI Types</h1>
-        <p>Every type has a unique cognitive function stack that shapes how they think, decide, and grow. Select any type to go deeper.</p>
+        <h1 id="explore-heading">What is a cognitive function stack?</h1>
+        <p class="page-header__dek">
+          There are <strong>eight</strong> Jungian cognitive functions. Your MBTI type arranges <strong>four</strong> as the <strong>primary</strong> stack and <strong>four</strong> as the <strong>shadow</strong> stack (positions 1 to 8). That arrangement is your <strong>cognitive function stack</strong>.
+        </p>
+      </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════
+         How stacks work — cream band (same rhythm as Home / relationship section)
+         ════════════════════════════════════════════ -->
+    <section class="section section-cream explore-stack-section" aria-labelledby="stack-primer-heading">
+      <h2 id="stack-primer-heading" class="sr-only">Primary and shadow stacks</h2>
+      <div class="explore-stack-section__bg" aria-hidden="true">
+        <span class="explore-stack-section__blob explore-stack-section__blob--lime"></span>
+        <span class="explore-stack-section__blob explore-stack-section__blob--lav"></span>
+        <span class="explore-stack-section__blob explore-stack-section__blob--lilac"></span>
+        <span class="explore-stack-section__blob explore-stack-section__blob--lime-sm"></span>
+        <span class="explore-stack-section__blob explore-stack-section__blob--ring"></span>
+      </div>
+      <div class="container explore-stack-section__content">
+
+        <div class="explore-stack-panel explore-stack-panel--primary explore-stack-panel--split mt-2xl" role="region" aria-labelledby="primary-stack-heading">
+          <div class="explore-stack-panel__col explore-stack-panel__col--label">
+            <span class="explore-stack-panel__badge explore-stack-panel__badge--primary">Positions 1–4</span>
+            <h3 id="primary-stack-heading" class="explore-stack-panel__title">Primary stack</h3>
+            <p class="explore-stack-panel__lede">Your conscious four, from everyday default to under-pressure rawness.</p>
+          </div>
+          <div class="explore-stack-panel__col explore-stack-panel__col--cards">
+            <div class="explore-stack-role-grid explore-stack-role-grid--split">
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">1</p>
+                <h4 class="explore-stack-role-title">Dominant</h4>
+                <p class="explore-stack-role-desc">First in line — your default lens; what you reach for before you think.</p>
+              </div>
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">2</p>
+                <h4 class="explore-stack-role-title">Auxiliary</h4>
+                <p class="explore-stack-role-desc">Second in line — supports the dominant; balances inner life with the outside world.</p>
+              </div>
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">3</p>
+                <h4 class="explore-stack-role-title">Tertiary</h4>
+                <p class="explore-stack-role-desc">Third in line — familiar enough to lean on; easy to overuse or loop on.</p>
+              </div>
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">4</p>
+                <h4 class="explore-stack-role-title">Inferior</h4>
+                <p class="explore-stack-role-desc">Fourth in line — least practiced; surfaces under stress, often exaggerated or clumsy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="explore-stack-panel explore-stack-panel--shadow explore-stack-panel--split mt-2xl" role="region" aria-labelledby="shadow-stack-heading">
+          <div class="explore-stack-panel__col explore-stack-panel__col--label">
+            <span class="explore-stack-panel__badge explore-stack-panel__badge--shadow">Positions 5–8</span>
+            <h3 id="shadow-stack-heading" class="explore-stack-panel__title">Shadow stack</h3>
+            <p class="explore-stack-panel__lede">The four not in your primary order. Less integrated, often louder under stress, conflict, or projection.</p>
+          </div>
+          <div class="explore-stack-panel__col explore-stack-panel__col--cards">
+            <div class="explore-stack-role-grid explore-stack-role-grid--split">
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">5</p>
+                <h4 class="explore-stack-role-title">Opposing</h4>
+                <p class="explore-stack-role-desc">Fifth in line — pushes against the dominant; resistance, contradiction, stubborn friction.</p>
+              </div>
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">6</p>
+                <h4 class="explore-stack-role-title">Critical parent</h4>
+                <p class="explore-stack-role-desc">Sixth in line — the nagging inner judge; rigid, harsh, or dismissive when it flares.</p>
+              </div>
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">7</p>
+                <h4 class="explore-stack-role-title">Trickster</h4>
+                <p class="explore-stack-role-desc">Seventh in line — blind spots and mischief; slippery logic, absurdity, or getting played.</p>
+              </div>
+              <div class="explore-stack-role">
+                <p class="explore-stack-role-kicker">8</p>
+                <h4 class="explore-stack-role-title">Demon</h4>
+                <p class="explore-stack-role-desc">Eighth in line — the hardest edge; deepest stress mode, often all-or-nothing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header text-center explore-functions-header">
+          <span class="text-eyebrow">Names</span>
+          <h2 id="eight-functions-heading">The eight cognitive functions</h2>
+          <p class="section-lead">
+            The labels below are the eight function names. You already saw the <strong>positions</strong> they can fill; type pages show <strong>which</strong> name goes in <strong>which</strong> slot for your type.
+          </p>
+        </div>
+        <div class="functions-grid mt-2xl" aria-labelledby="eight-functions-heading">
+          <div class="function-tile">
+            <span class="function-tile-code">Fi</span>
+            <span class="function-tile-name">Introverted Feeling</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Fe</span>
+            <span class="function-tile-name">Extroverted Feeling</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Ti</span>
+            <span class="function-tile-name">Introverted Thinking</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Te</span>
+            <span class="function-tile-name">Extroverted Thinking</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Ni</span>
+            <span class="function-tile-name">Introverted Intuition</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Ne</span>
+            <span class="function-tile-name">Extroverted Intuition</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Si</span>
+            <span class="function-tile-name">Introverted Sensing</span>
+          </div>
+          <div class="function-tile">
+            <span class="function-tile-code">Se</span>
+            <span class="function-tile-name">Extroverted Sensing</span>
+          </div>
+        </div>
+
+        <p class="explore-stack-footnote text-center mt-2xl">
+          Type pages put all of this together for <strong>your</strong> four letters, with examples you can use, not generic definitions.
+        </p>
       </div>
     </section>
 
     <!-- ════════════════════════════════════════════
-         Section 2 — 16-Type Grid
+         All 16 types — lilac + white cards (same as Home type grid)
          ════════════════════════════════════════════ -->
-    <section class="section" aria-labelledby="type-grid-heading">
+    <section class="section section--explore-grid" aria-labelledby="type-grid-heading">
       <div class="container">
 
-        <h2 id="type-grid-heading" class="sr-only">All 16 MBTI types</h2>
+        <div class="section-header text-center">
+          <span class="text-eyebrow">Browse</span>
+          <h2 id="type-grid-heading">Choose your type</h2>
+          <p class="section-lead">Pick a type to open its page.</p>
+        </div>
 
-        <div class="explore-type-grid">
+        <div class="explore-type-grid mt-2xl">
 
           <!-- NF — Idealists -->
           <a href="/types/infp.html" class="explore-type-card">
@@ -202,26 +335,26 @@
     </section>
 
     <!-- ════════════════════════════════════════════
-         Section 3 — Relationship Map
+         Relationship compatibility — cream (alternates after lilac grid)
          ════════════════════════════════════════════ -->
-    <section class="section section-bg-lilac" aria-labelledby="relation-heading">
+    <section class="section section-cream" aria-labelledby="relation-heading">
       <div class="container">
 
         <div class="section-header text-center">
           <span class="text-eyebrow">How Types Connect</span>
           <h2 id="relation-heading">Relationship Compatibility</h2>
-          <p class="section-lead">Cognitive functions shape how types relate to each other. Some pairs flow easily — others create growth through friction.</p>
+          <p class="section-lead">Cognitive functions shape how types relate. Some pairs flow easily — others create growth through friction.</p>
         </div>
 
         <!-- Tab bar — JS toggle wired up in next pass -->
         <div class="relation-tabs mt-2xl" role="tablist" aria-label="Relationship type">
-          <button class="relation-tab relation-tab-active" role="tab" aria-selected="true"  aria-controls="tab-friendship">Friendship</button>
-          <button class="relation-tab"                    role="tab" aria-selected="false" aria-controls="tab-work">Work</button>
-          <button class="relation-tab"                    role="tab" aria-selected="false" aria-controls="tab-romance">Romance</button>
+          <button type="button" class="relation-tab relation-tab-active" role="tab" aria-selected="true" aria-controls="tab-friendship" id="tab-friendship-label">Friendship</button>
+          <button type="button" class="relation-tab" role="tab" aria-selected="false" aria-controls="tab-work" id="tab-work-label">Work</button>
+          <button type="button" class="relation-tab" role="tab" aria-selected="false" aria-controls="tab-romance" id="tab-romance-label">Romance</button>
         </div>
 
         <!-- Tab panel: Friendship (visible by default) -->
-        <div class="relation-panel" id="tab-friendship" role="tabpanel" aria-labelledby="tab-friendship">
+        <div class="relation-panel" id="tab-friendship" role="tabpanel" aria-labelledby="tab-friendship-label" aria-hidden="false">
 
           <div class="relation-group-grid mt-2xl">
 
@@ -234,7 +367,7 @@
                 <span class="type-badge">ENFP</span>
                 <span class="type-badge">ENFJ</span>
               </div>
-              <p class="relation-group-note">Pair well with: NF + NT for intellectual depth · NF + NF for emotional resonance</p>
+              <p class="relation-group-note">Friendship vibe: easiest with NF + NF (same emotional shorthand) · energizing contrast with SP (play and presence without heavy processing)</p>
             </div>
 
             <div class="relation-group">
@@ -246,7 +379,7 @@
                 <span class="type-badge">ENTP</span>
                 <span class="type-badge">ENTJ</span>
               </div>
-              <p class="relation-group-note">Pair well with: NT + NF for inspiration · NT + NT for intellectual sparring</p>
+              <p class="relation-group-note">Friendship vibe: low-maintenance with NT + NT (pick up where you left off) · warmth without clinginess with NF (if you make room for feelings)</p>
             </div>
 
             <div class="relation-group">
@@ -258,7 +391,7 @@
                 <span class="type-badge">ESFJ</span>
                 <span class="type-badge">ESTJ</span>
               </div>
-              <p class="relation-group-note">Pair well with: SJ + SP for shared groundedness · SJ + NF for balance of warmth</p>
+              <p class="relation-group-note">Friendship vibe: rock-solid with SJ + SJ (shared rituals) · loosened up with SP (fun breaks the routine)</p>
             </div>
 
             <div class="relation-group">
@@ -270,20 +403,120 @@
                 <span class="type-badge">ESFP</span>
                 <span class="type-badge">ESTP</span>
               </div>
-              <p class="relation-group-note">Pair well with: SP + SJ for stability and fun · SP + NT for challenge and play</p>
+              <p class="relation-group-note">Friendship vibe: kinetic with SP + SP (always something to do) · grounding with SJ (someone who actually texts back and shows up)</p>
             </div>
 
           </div>
         </div>
 
-        <!-- Tab panel: Work (hidden — toggled by JS in next pass) -->
-        <div class="relation-panel relation-panel-hidden" id="tab-work" role="tabpanel" aria-labelledby="tab-work">
-          <p class="relation-panel-placeholder text-center mt-2xl">Work compatibility view — powered by the relationship-map component.</p>
+        <!-- Tab panel: Work -->
+        <div class="relation-panel relation-panel-hidden" id="tab-work" role="tabpanel" aria-labelledby="tab-work-label" aria-hidden="true">
+          <div class="relation-group-grid mt-2xl">
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">NF — The Idealists</h3>
+              <p class="relation-group-body">At work, NFs light up when mission and people align — but several NFs in the same room can echo the same tradeoff avoidance (alignment without closure). Cross-temperament partners (especially <strong>NT</strong> for rigor or <strong>SJ</strong> for execution) often cover gaps an all-idealist lineup misses. Purely metrics-only cultures still feel hollow to them.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">INFP</span>
+                <span class="type-badge">INFJ</span>
+                <span class="type-badge">ENFP</span>
+                <span class="type-badge">ENFJ</span>
+              </div>
+              <p class="relation-group-note">At work: pair <strong>NF + NT or NF + SJ</strong> for clearer roles · stack <strong>NF + NF</strong> carefully (two visionaries, one calendar)</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">NT — The Analysts</h3>
+              <p class="relation-group-body">NTs excel at strategy, systems, and debate. They respect competence and autonomy — and do best when meetings have a point, not just rapport for its own sake.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">INTP</span>
+                <span class="type-badge">INTJ</span>
+                <span class="type-badge">ENTP</span>
+                <span class="type-badge">ENTJ</span>
+              </div>
+              <p class="relation-group-note">At work: clean handoffs with SJ (your idea, their checklist) · tension with another NT when two strategists debate instead of shipping</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">SJ — The Guardians</h3>
+              <p class="relation-group-body">SJs are the steady operators — planning, standards, and accountability. They keep commitments real and processes running; friction hits when rules shift without good reason.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">ISFJ</span>
+                <span class="type-badge">ISTJ</span>
+                <span class="type-badge">ESFJ</span>
+                <span class="type-badge">ESTJ</span>
+              </div>
+              <p class="relation-group-note">At work: field + ops synergy with SP (real-time fixes, your playbook) · pushback from NT if “process” blocks a needed pivot</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">SP — The Explorers</h3>
+              <p class="relation-group-body">SPs shine hands-on — crisis response, craft, sales floors, anything that rewards reading the room and moving fast. They chafe when hierarchy blocks initiative.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">ISFP</span>
+                <span class="type-badge">ISTP</span>
+                <span class="type-badge">ESFP</span>
+                <span class="type-badge">ESTP</span>
+              </div>
+              <p class="relation-group-note">At work: fast iteration with NT (options on the fly) · missed handoffs with another SP unless someone owns the calendar</p>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Tab panel: Romance (hidden — toggled by JS in next pass) -->
-        <div class="relation-panel relation-panel-hidden" id="tab-romance" role="tabpanel" aria-labelledby="tab-romance">
-          <p class="relation-panel-placeholder text-center mt-2xl">Romance compatibility view — powered by the relationship-map component.</p>
+        <!-- Tab panel: Romance -->
+        <div class="relation-panel relation-panel-hidden" id="tab-romance" role="tabpanel" aria-labelledby="tab-romance-label" aria-hidden="true">
+          <div class="relation-group-grid mt-2xl">
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">NF — The Idealists</h3>
+              <p class="relation-group-body">In love, NFs chase depth — emotional attunement, shared meaning, and a sense of being truly known. Intensity can feel magical or overwhelming, depending on the partner.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">INFP</span>
+                <span class="type-badge">INFJ</span>
+                <span class="type-badge">ENFP</span>
+                <span class="type-badge">ENFJ</span>
+              </div>
+              <p class="relation-group-note">In romance: deep recognition with NF + NF (watch idealizing) · growth arc with NT (clarity vs emotional weather — negotiate pace and reassurance)</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">NT — The Analysts</h3>
+              <p class="relation-group-body">NTs value respect, intellectual chemistry, and room to breathe. Growth often means naming feelings without turning every emotion into a problem to solve.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">INTP</span>
+                <span class="type-badge">INTJ</span>
+                <span class="type-badge">ENTP</span>
+                <span class="type-badge">ENTJ</span>
+              </div>
+              <p class="relation-group-note">In romance: spark with NF (mind meets heart) · steadiness with SJ (plans you can trust) · watch alone-time vs closeness</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">SJ — The Guardians</h3>
+              <p class="relation-group-body">SJs show love through commitment — plans kept, problems handled, people looked after. They want reliability from a partner; spontaneity may take practice, not instinct.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">ISFJ</span>
+                <span class="type-badge">ISTJ</span>
+                <span class="type-badge">ESFJ</span>
+                <span class="type-badge">ESTJ</span>
+              </div>
+              <p class="relation-group-note">In romance: comfort with SP (fun breaks the grind) · tenderness with NF (words matter) · friction when “the plan” meets last-minute chaos</p>
+            </div>
+
+            <div class="relation-group">
+              <h3 class="relation-group-heading">SP — The Explorers</h3>
+              <p class="relation-group-body">SPs bond through the present — shared adventures, humor, touch, and “let’s just go.” Keeping novelty alive matters; endless routine-only weeks can feel like slow suffocation.</p>
+              <div class="relation-type-badges">
+                <span class="type-badge">ISFP</span>
+                <span class="type-badge">ISTP</span>
+                <span class="type-badge">ESFP</span>
+                <span class="type-badge">ESTP</span>
+              </div>
+              <p class="relation-group-note">In romance: chemistry with NF (depth + sensation) · grounding with SJ (someone who stays) · negotiate freedom vs future talk early</p>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -293,17 +526,57 @@
 
   <!-- Footer — static HTML; swap for <site-footer> after approval -->
   <footer class="footer" role="contentinfo">
-    <div class="container">
-      <p class="footer-logo">TypeDepth</p>
-      <p class="footer-tagline">Go beyond your 4 letters. Understand the 8 cognitive functions that make you who you are.</p>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/index.html">Home</a>
-        <a href="/explore.html">Explore Types</a>
-        <a href="/compare.html">Compare Types</a>
-      </nav>
-      <p class="footer-copy">&copy; 2025 TypeDepth. Built for learning.</p>
+    <div class="container footer-inner">
+      <div class="footer-col footer-col--brand">
+        <p class="footer-logo">TypeDepth</p>
+        <p class="footer-tagline">Go beyond your 4 letters. Understand the 8 cognitive functions that make you who you are.</p>
+        <address class="footer-address">
+          TypeDepth<br />
+          1 Promise Land Boulevard<br />
+          Heaven · Bethlehem · JC 777
+        </address>
+        <p class="footer-phone">
+          <a href="tel:+6525377968" class="footer-phone-link">+65 BLESSYOU</a>
+        </p>
+      </div>
+      <div class="footer-col footer-col--links">
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="/index.html">Home</a>
+          <a href="/explore.html">Explore Types</a>
+          <a href="/compare.html">Compare Types</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 TypeDepth. Built for learning.</p>
+      </div>
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var tablist = document.querySelector('.relation-tabs');
+      if (!tablist) return;
+      var tabs = tablist.querySelectorAll('[role="tab"]');
+      var panels = document.querySelectorAll('.relation-panel');
+
+      function activatePanel(panelId) {
+        tabs.forEach(function (tab) {
+          var isSelected = tab.getAttribute('aria-controls') === panelId;
+          tab.classList.toggle('relation-tab-active', isSelected);
+          tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+        });
+        panels.forEach(function (panel) {
+          var show = panel.id === panelId;
+          panel.classList.toggle('relation-panel-hidden', !show);
+          panel.setAttribute('aria-hidden', show ? 'false' : 'true');
+        });
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var id = tab.getAttribute('aria-controls');
+          if (id) activatePanel(id);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

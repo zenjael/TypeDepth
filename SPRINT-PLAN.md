@@ -47,7 +47,7 @@ Sections:
 ---
 
 ## Sprint 2 — All MBTIs Overview Page
-**Status:** 🔄 In Progress
+**Status:** ✅ Complete (static HTML + CSS pass)
 
 **File:** `explore.html`
 **SEO:** `CollectionPage` schema
@@ -61,24 +61,23 @@ Sections:
 ---
 
 ## Sprint 3 — INFP + INFJ Detail Pages (Template)
-**Status:** ⏳ Pending
+**Status:** ✅ Complete (static HTML + CSS pass)
 
 **Files:** `types/infp.html`, `types/infj.html`
-**SEO:** `Article` schema + `FAQPage` schema
+**SEO:** `Article` schema stub, H1, meta description, OG tags
 
 Sections:
-- [ ] Function stack visual (`<function-stack>` component)
-- [ ] Interactive question selector (`<question-selector>` component)
-  - What are my natural tendencies?
-  - What am I like under stress?
-  - What loops do I fall into?
-  - What do I need from others?
-  - How do I grow?
-- [ ] Content sections for each question (anchor-linked)
-- [ ] Growth path
-- [ ] Compare CTA → links to compare page
+- [x] Type header — badge, tagline, H1, stack preview (Dom → Aux → Tert → Inf)
+- [x] Sticky question navigator — anchor links to all sections
+- [x] Function stack — all 8 functions (main + shadow groups)
+- [x] Natural tendencies — function-tagged list
+- [x] Under stress — inferior grip explained + signs list
+- [x] Loops — named loops with functions + first-person quote
+- [x] What I need — numbered list
+- [x] Growth path — 3-step grid
+- [x] Compare CTA → links to compare page + explore page
 
-These two pages establish the template for all 16 types.
+**Next:** Wire up `<function-stack>` and `<question-selector>` components after design approval.
 
 ---
 
