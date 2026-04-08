@@ -796,7 +796,6 @@ h2 + .section-lead {
   width: 100%;
   height: auto;
   aspect-ratio: 1200 / 350;
-  vertical-align: top;
 }
 
 .hero--duck-lime-fill .hero-dome-fill {
