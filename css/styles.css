@@ -2013,6 +2013,20 @@ svg.icon-outline {
 /* ============================================================
    18. TYPE DETAIL PAGE — HEADER
    ============================================================ */
+.type-back-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-primary);
+  opacity: 0.55;
+  text-decoration: none;
+  margin-bottom: var(--space-xl);
+  transition: opacity 0.2s;
+}
+.type-back-link:hover { opacity: 1; }
+
 .type-header {
   background-color: var(--color-cream);
   padding: 100px 0;
@@ -2067,7 +2081,7 @@ svg.icon-outline {
 .stack-dominant  { background-color: var(--color-primary); }
 .stack-auxiliary { background-color: var(--color-primary); opacity: 0.75; }
 .stack-tertiary  { background-color: var(--color-primary); opacity: 0.5; }
-.stack-inferior  { background-color: var(--color-primary); opacity: 0.3; color: var(--color-primary); }
+.stack-inferior  { background-color: var(--color-primary); opacity: 0.3; }
 
 .stack-preview-arrow {
   font-size: var(--text-sm);
@@ -2121,6 +2135,62 @@ svg.icon-outline {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   opacity: 1;
+}
+
+
+/* ============================================================
+   19b. TYPE DETAIL PAGE — TYPE STRIP
+   ============================================================ */
+.type-strip {
+  background-color: var(--color-cream);
+  border-top: 1px solid rgba(28, 26, 94, 0.06);
+  border-bottom: 1px solid rgba(28, 26, 94, 0.06);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.type-strip::-webkit-scrollbar { display: none; }
+
+.type-strip-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-sm) var(--space-xl);
+  max-width: var(--container-max, 1080px);
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.type-strip-item {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  opacity: 0.4;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: opacity 0.18s, background-color 0.18s;
+  flex-shrink: 0;
+}
+.type-strip-item:hover {
+  opacity: 0.8;
+  background-color: var(--color-lilac);
+}
+.type-strip-item.is-current {
+  opacity: 1;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.type-strip-divider {
+  width: 1px;
+  height: 18px;
+  background-color: var(--color-primary);
+  opacity: 0.12;
+  flex-shrink: 0;
+  margin: 0 4px;
 }
 
 
