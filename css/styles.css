@@ -2013,20 +2013,6 @@ svg.icon-outline {
 /* ============================================================
    18. TYPE DETAIL PAGE — HEADER
    ============================================================ */
-.type-back-link {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-primary);
-  opacity: 0.55;
-  text-decoration: none;
-  margin-bottom: var(--space-xl);
-  transition: opacity 0.2s;
-}
-.type-back-link:hover { opacity: 1; }
-
 .type-header {
   background-color: var(--color-cream);
   padding: 100px 0;
@@ -2142,9 +2128,8 @@ svg.icon-outline {
    19b. TYPE DETAIL PAGE — TYPE STRIP
    ============================================================ */
 .type-strip {
-  background-color: var(--color-cream);
-  border-top: 1px solid rgba(28, 26, 94, 0.06);
-  border-bottom: 1px solid rgba(28, 26, 94, 0.06);
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(28, 26, 94, 0.08);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -2154,6 +2139,7 @@ svg.icon-outline {
 .type-strip-track {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: var(--space-sm) var(--space-xl);
   max-width: var(--container-max, 1080px);
