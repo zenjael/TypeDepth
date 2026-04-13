@@ -1,0 +1,319 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://typedepth.com/#organization",
+      "name": "TypeDepth",
+      "url": "https://typedepth.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://typedepth.com/assets/og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "slogan": "You Are More Than Your 4 Letters",
+      "description": "TypeDepth helps people go beyond the four MBTI letters and understand the eight cognitive functions that make up their type.",
+      "sameAs": []
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://typedepth.com/#website",
+      "url": "https://typedepth.com/",
+      "name": "TypeDepth",
+      "description": "Explore all 16 MBTI types through their cognitive function stacks. Compare types side by side and understand how you actually think, feel, and relate.",
+      "publisher": { "@id": "https://typedepth.com/#organization" },
+      "inLanguage": "en"
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://typedepth.com/#webpage",
+      "url": "https://typedepth.com/",
+      "name": "You Are More Than Your 4 Letters",
+      "isPartOf": { "@id": "https://typedepth.com/#website" },
+      "about": { "@id": "https://typedepth.com/#organization" },
+      "description": "TypeDepth — go beyond the four MBTI letters. Discover the eight cognitive functions behind your type and how they shape the way you think, feel, and relate.",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://typedepth.com/assets/og-image.png"
+      },
+      "breadcrumb": { "@id": "https://typedepth.com/#breadcrumb-home" }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://typedepth.com/#breadcrumb-home",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://typedepth.com/" }
+      ]
+    },
+
+    {
+      "@type": "CollectionPage",
+      "@id": "https://typedepth.com/explore.html#webpage",
+      "url": "https://typedepth.com/explore.html",
+      "name": "What is a cognitive function stack?",
+      "headline": "Explore all 16 MBTI types and their cognitive function stacks",
+      "description": "Browse all 16 MBTI types and explore their cognitive function stacks. See how each type thinks, feels, and relates — in friendship, work, and romance.",
+      "isPartOf": { "@id": "https://typedepth.com/#website" },
+      "inLanguage": "en",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://typedepth.com/assets/og-image.png"
+      },
+      "breadcrumb": { "@id": "https://typedepth.com/explore.html#breadcrumb" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "All 16 MBTI types",
+        "numberOfItems": 16,
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "itemListElement": [
+          { "@type": "ListItem", "position":  1, "name": "INFP — The Mediator",     "url": "https://typedepth.com/types/infp.html" },
+          { "@type": "ListItem", "position":  2, "name": "INFJ — The Advocate",     "url": "https://typedepth.com/types/infj.html" },
+          { "@type": "ListItem", "position":  3, "name": "ENFP — The Campaigner",   "url": "https://typedepth.com/types/enfp.html" },
+          { "@type": "ListItem", "position":  4, "name": "ENFJ — The Protagonist",  "url": "https://typedepth.com/types/enfj.html" },
+          { "@type": "ListItem", "position":  5, "name": "INTP — The Logician",     "url": "https://typedepth.com/types/intp.html" },
+          { "@type": "ListItem", "position":  6, "name": "INTJ — The Architect",    "url": "https://typedepth.com/types/intj.html" },
+          { "@type": "ListItem", "position":  7, "name": "ENTP — The Debater",      "url": "https://typedepth.com/types/entp.html" },
+          { "@type": "ListItem", "position":  8, "name": "ENTJ — The Commander",    "url": "https://typedepth.com/types/entj.html" },
+          { "@type": "ListItem", "position":  9, "name": "ISFJ — The Defender",     "url": "https://typedepth.com/types/isfj.html" },
+          { "@type": "ListItem", "position": 10, "name": "ISTJ — The Logistician",  "url": "https://typedepth.com/types/istj.html" },
+          { "@type": "ListItem", "position": 11, "name": "ESFJ — The Consul",       "url": "https://typedepth.com/types/esfj.html" },
+          { "@type": "ListItem", "position": 12, "name": "ESTJ — The Executive",    "url": "https://typedepth.com/types/estj.html" },
+          { "@type": "ListItem", "position": 13, "name": "ISFP — The Adventurer",   "url": "https://typedepth.com/types/isfp.html" },
+          { "@type": "ListItem", "position": 14, "name": "ISTP — The Virtuoso",     "url": "https://typedepth.com/types/istp.html" },
+          { "@type": "ListItem", "position": 15, "name": "ESFP — The Entertainer",  "url": "https://typedepth.com/types/esfp.html" },
+          { "@type": "ListItem", "position": 16, "name": "ESTP — The Entrepreneur", "url": "https://typedepth.com/types/estp.html" }
+        ]
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://typedepth.com/explore.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://typedepth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Explore", "item": "https://typedepth.com/explore.html" }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://typedepth.com/compare.html#webpage",
+      "url": "https://typedepth.com/compare.html",
+      "name": "Compare MBTI Types Side by Side",
+      "headline": "Compare two MBTI types",
+      "description": "Compare any two MBTI types side by side. See how their cognitive function stacks differ — what they share, where they diverge, and which pairs are commonly confused.",
+      "isPartOf": { "@id": "https://typedepth.com/#website" },
+      "inLanguage": "en",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://typedepth.com/assets/og-image.png"
+      },
+      "breadcrumb": { "@id": "https://typedepth.com/compare.html#breadcrumb" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What do INFP and INFJ have in common?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both are introverted NF idealists. Both lead with an inward-turned function, prioritise feeling over thinking, and filter the world through intuition rather than direct sensing. The overlap is real — and it is exactly why the two types are often mistaken for each other."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are INFP and INFJ different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "INFPs lead with Fi (Introverted Feeling) — a private compass of personal values. INFJs lead with Ni (Introverted Intuition) — a synthesising vision that points at one likely future. INFP asks 'does this match what I value?'; INFJ asks 'where is this heading?'."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I tell INFP and INFJ apart under stress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Their inferior functions are opposites. INFP grips Te — sudden bluntness, control, rigid right-vs-wrong thinking. INFJ grips Se — overindulgence in food, screens or shopping, and physical fixation. The inferior function is the fastest way to tell two similar-sounding types apart."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are INFP and INFJ so often mistyped?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three of four letters match, the surface vibe is similar, and most online tests lean on the I/E, N/S, F/T, J/P dichotomies instead of the underlying cognitive functions. Function stacks cut through the confusion: lead with your dominant function, not your trait scores."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://typedepth.com/compare.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://typedepth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://typedepth.com/compare.html" }
+      ]
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://typedepth.com/types/infp.html#article",
+      "url": "https://typedepth.com/types/infp.html",
+      "mainEntityOfPage": "https://typedepth.com/types/infp.html",
+      "headline": "INFP: The Mediator's Cognitive Function Stack",
+      "name": "INFP: The Mediator",
+      "description": "Understand the INFP cognitive function stack — Fi, Ne, Si, Te — your natural tendencies, stress responses, the loops you fall into, and your growth path.",
+      "about": "INFP cognitive function stack and personality type",
+      "keywords": "INFP, MBTI, cognitive functions, Introverted Feeling, Extraverted Intuition, Mediator",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://typedepth.com/assets/og-image.png"
+      },
+      "author":    { "@id": "https://typedepth.com/#organization" },
+      "publisher": { "@id": "https://typedepth.com/#organization" },
+      "isPartOf":  { "@id": "https://typedepth.com/#website" }
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://typedepth.com/types/infp.html#faq",
+      "url": "https://typedepth.com/types/infp.html",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the INFP cognitive function stack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The INFP primary stack is Fi (Introverted Feeling) → Ne (Extraverted Intuition) → Si (Introverted Sensing) → Te (Extraverted Thinking). Fi is the dominant function — deep personal values that filter every decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the INFP's natural tendencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "INFPs are deeply loyal to personal values, hold a rich inner world that others rarely see in full, are naturally empathetic, are drawn to creative expression, and tend to reach for an idealised version of things."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the INFP like under stress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under stress the inferior Te grips the INFP. They become uncharacteristically rigid, blunt and controlling — obsessing over facts or being right, and lashing out with cold logic instead of feelings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What loops does the INFP fall into?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Rumination Loop (Fi + Si, bypassing Ne) replays past experiences through the lens of values. The Spiral (Fi + Ne feeding each other) generates endless worried possibilities and judges each one against personal values."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the INFP grow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "INFP growth comes from developing the inferior Te — learning that structure and efficiency aren't the enemy of authenticity. Small practical commitments build trust in themselves."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://typedepth.com/types/infp.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://typedepth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Explore", "item": "https://typedepth.com/explore.html" },
+        { "@type": "ListItem", "position": 3, "name": "INFP",    "item": "https://typedepth.com/types/infp.html" }
+      ]
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://typedepth.com/types/infj.html#article",
+      "url": "https://typedepth.com/types/infj.html",
+      "mainEntityOfPage": "https://typedepth.com/types/infj.html",
+      "headline": "INFJ: The Advocate's Cognitive Function Stack",
+      "name": "INFJ: The Advocate",
+      "description": "Understand the INFJ cognitive function stack — Ni, Fe, Ti, Se — your natural tendencies, stress responses, the loops you fall into, and your growth path.",
+      "about": "INFJ cognitive function stack and personality type",
+      "keywords": "INFJ, MBTI, cognitive functions, Introverted Intuition, Extraverted Feeling, Advocate",
+      "inLanguage": "en",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://typedepth.com/assets/og-image.png"
+      },
+      "author":    { "@id": "https://typedepth.com/#organization" },
+      "publisher": { "@id": "https://typedepth.com/#organization" },
+      "isPartOf":  { "@id": "https://typedepth.com/#website" }
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://typedepth.com/types/infj.html#faq",
+      "url": "https://typedepth.com/types/infj.html",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the INFJ cognitive function stack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The INFJ primary stack is Ni (Introverted Intuition) → Fe (Extraverted Feeling) → Ti (Introverted Thinking) → Se (Extraverted Sensing). Ni is the dominant function — a synthesising vision that points at one likely future."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the INFJ's natural tendencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "INFJs hold a strong, clear inner vision and often 'just know' things without being able to explain why. They absorb others' emotions, are highly private, are perfectionistic about purpose, and can perform the famous 'door slam' when pushed too far."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the INFJ like under stress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under stress the inferior Se grips the INFJ. They become hyper-focused on the physical world — overindulging in food, screens or shopping, hyper-aware of every physical sensation, and out of reach of their usual Ni vision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What loops does the INFJ fall into?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Isolation Loop (Ni + Ti, bypassing Fe) retreats inward and builds elaborate logical frameworks alone. Certainty grows in lockstep with disconnection from other people."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the INFJ grow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "INFJ growth comes from developing Se — being present in the body, the moment, the physical world. Exercise, cooking and nature walks aren't distractions; they are the medicine."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://typedepth.com/types/infj.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://typedepth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Explore", "item": "https://typedepth.com/explore.html" },
+        { "@type": "ListItem", "position": 3, "name": "INFJ",    "item": "https://typedepth.com/types/infj.html" }
+      ]
+    }
+
+  ]
+}
