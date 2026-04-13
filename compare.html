@@ -5,23 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO: Core ═══ -->
-  <title>Compare Types | TypeDepth</title>
-  <meta name="description" content="Compare two MBTI types side by side. Coming soon." />
+  <title>Compare MBTI Types Side by Side | TypeDepth</title>
+  <meta name="description" content="Compare any two MBTI types side by side. See how their cognitive function stacks differ — what they share, where they diverge, and which pairs are commonly confused." />
   <link rel="canonical" href="https://typedepth.com/compare.html" />
 
   <!-- ═══ SEO: Open Graph ═══ -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Compare Types | TypeDepth" />
-  <meta property="og:description" content="Compare two MBTI types side by side. Coming soon." />
+  <meta property="og:title"       content="Compare MBTI Types Side by Side | TypeDepth" />
+  <meta property="og:description" content="Compare any two MBTI types side by side. See how their cognitive function stacks differ — what they share, where they diverge, and which pairs are commonly confused." />
   <meta property="og:url"         content="https://typedepth.com/compare.html" />
-  <meta property="og:image"        content="https://typedepth.com/assets/og-image.png" />
-  <meta property="og:site_name"    content="TypeDepth" />
+  <meta property="og:image"       content="https://typedepth.com/assets/og-image.png" />
+  <meta property="og:site_name"   content="TypeDepth" />
 
   <!-- ═══ SEO: Twitter Card ═══ -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Compare Types | TypeDepth" />
-  <meta name="twitter:description" content="Compare two MBTI types side by side. Coming soon." />
+  <meta name="twitter:title"       content="Compare MBTI Types Side by Side | TypeDepth" />
+  <meta name="twitter:description" content="Compare any two MBTI types side by side. See how their cognitive function stacks differ — what they share, where they diverge, and which pairs are commonly confused." />
   <meta name="twitter:image"       content="https://typedepth.com/assets/og-image.png" />
+
+  <!-- ═══ SEO: JSON-LD Schema (added in Sprint 6) ═══ -->
+  <!--
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Compare MBTI Types",
+    "url": "https://typedepth.com/compare.html"
+  }
+  </script>
+  -->
 
   <!-- ═══ Fonts ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,10 +42,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet" />
 
+  <!-- ═══ Styles ═══ -->
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- ═══ Web Components (wired up after static pass is approved) ═══ -->
+  <!-- <script src="/components/nav-bar.js"     defer></script> -->
+  <!-- <script src="/components/site-footer.js" defer></script> -->
+  <!-- <script src="/components/compare-panel.js" defer></script> -->
 </head>
 <body>
 
+  <!-- Navigation — static HTML; swap for <nav-bar active="compare"> after approval -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/index.html" class="nav-logo" aria-label="TypeDepth home">TypeDepth</a>
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
@@ -50,19 +69,403 @@
 
   <main id="main-content">
 
-    <section class="compare-soon-section">
-      <div class="container compare-soon-content">
-        <h1 class="compare-soon__title">Coming soon</h1>
-        <p class="compare-soon__sub">Type comparison is on the way.</p>
-        <a href="/explore.html" class="btn btn-primary compare-soon__cta">Explore types</a>
+    <!-- ════════════════════════════════════════════
+         Page header — cream band
+         ════════════════════════════════════════════ -->
+    <header class="page-header page-header--center">
+      <div class="container">
+        <h1 id="compare-heading">Compare two MBTI types</h1>
+        <p class="page-header__dek">
+          Two types can share three of four letters and still operate from completely different <strong>function stacks</strong>. Pick a pair to see exactly where they overlap, where they split, and why people mix them up.
+        </p>
       </div>
-      <div class="compare-soon-hands">
-        <img src="/img/hands.svg" class="compare-soon-hands__img" alt="" width="569" height="322" />
+    </header>
+
+    <!-- ════════════════════════════════════════════
+         Type picker — lilac band
+         ════════════════════════════════════════════ -->
+    <section class="section section-bg-lilac compare-picker-section" aria-labelledby="picker-heading">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="text-eyebrow">Pick two types</span>
+          <h2 id="picker-heading">Choose any pair to compare</h2>
+        </div>
+
+        <form class="compare-picker mt-2xl" action="#comparison" method="get" aria-describedby="picker-help">
+          <div class="compare-picker__field">
+            <label for="type-a" class="compare-picker__label">Type A</label>
+            <select id="type-a" name="a" class="compare-picker__select" autocomplete="off">
+              <optgroup label="NF — Idealists">
+                <option value="infp" selected>INFP — The Mediator</option>
+                <option value="infj">INFJ — The Advocate</option>
+                <option value="enfp">ENFP — The Campaigner</option>
+                <option value="enfj">ENFJ — The Protagonist</option>
+              </optgroup>
+              <optgroup label="NT — Analysts">
+                <option value="intp">INTP — The Logician</option>
+                <option value="intj">INTJ — The Architect</option>
+                <option value="entp">ENTP — The Debater</option>
+                <option value="entj">ENTJ — The Commander</option>
+              </optgroup>
+              <optgroup label="SJ — Guardians">
+                <option value="isfj">ISFJ — The Defender</option>
+                <option value="istj">ISTJ — The Logistician</option>
+                <option value="esfj">ESFJ — The Consul</option>
+                <option value="estj">ESTJ — The Executive</option>
+              </optgroup>
+              <optgroup label="SP — Explorers">
+                <option value="isfp">ISFP — The Adventurer</option>
+                <option value="istp">ISTP — The Virtuoso</option>
+                <option value="esfp">ESFP — The Entertainer</option>
+                <option value="estp">ESTP — The Entrepreneur</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <span class="compare-picker__vs" aria-hidden="true">vs</span>
+
+          <div class="compare-picker__field">
+            <label for="type-b" class="compare-picker__label">Type B</label>
+            <select id="type-b" name="b" class="compare-picker__select" autocomplete="off">
+              <optgroup label="NF — Idealists">
+                <option value="infp">INFP — The Mediator</option>
+                <option value="infj" selected>INFJ — The Advocate</option>
+                <option value="enfp">ENFP — The Campaigner</option>
+                <option value="enfj">ENFJ — The Protagonist</option>
+              </optgroup>
+              <optgroup label="NT — Analysts">
+                <option value="intp">INTP — The Logician</option>
+                <option value="intj">INTJ — The Architect</option>
+                <option value="entp">ENTP — The Debater</option>
+                <option value="entj">ENTJ — The Commander</option>
+              </optgroup>
+              <optgroup label="SJ — Guardians">
+                <option value="isfj">ISFJ — The Defender</option>
+                <option value="istj">ISTJ — The Logistician</option>
+                <option value="esfj">ESFJ — The Consul</option>
+                <option value="estj">ESTJ — The Executive</option>
+              </optgroup>
+              <optgroup label="SP — Explorers">
+                <option value="isfp">ISFP — The Adventurer</option>
+                <option value="istp">ISTP — The Virtuoso</option>
+                <option value="esfp">ESFP — The Entertainer</option>
+                <option value="estp">ESTP — The Entrepreneur</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-dark compare-picker__submit">Compare</button>
+        </form>
+
+        <p id="picker-help" class="compare-picker__hint text-center mt-md">
+          Detailed comparison data is live for <strong>INFP</strong> and <strong>INFJ</strong>. The remaining 14 types ship with the next sprint.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         Comparison result — INFP vs INFJ (default pair)
+         ════════════════════════════════════════════ -->
+    <section class="section compare-result" id="comparison" aria-labelledby="result-heading">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="text-eyebrow">Side by side</span>
+          <h2 id="result-heading">INFP vs INFJ</h2>
+          <p class="section-lead">Same three letters, two completely different cognitive function stacks. This is the classic "wait, am I actually the other one?" pair.</p>
+        </div>
+
+        <!-- ─── Type identity heads ─────────────────── -->
+        <div class="compare-heads mt-2xl" role="group" aria-label="Type identities">
+
+          <article class="compare-type-card compare-type-card--a">
+            <span class="compare-type-card__badge">INFP</span>
+            <h3 class="compare-type-card__name">The Mediator</h3>
+            <p class="compare-type-card__tagline">Quietly idealistic, fiercely authentic</p>
+            <p class="compare-type-card__desc">INFPs are driven by deeply held personal values and a rich inner world. They seek meaning in everything and lead with empathy and imagination.</p>
+            <div class="compare-type-card__stack" aria-label="INFP primary stack">
+              <span class="stack-preview-item stack-dominant">Fi</span>
+              <span class="stack-preview-arrow" aria-hidden="true">→</span>
+              <span class="stack-preview-item stack-auxiliary">Ne</span>
+              <span class="stack-preview-arrow" aria-hidden="true">→</span>
+              <span class="stack-preview-item stack-tertiary">Si</span>
+              <span class="stack-preview-arrow" aria-hidden="true">→</span>
+              <span class="stack-preview-item stack-inferior">Te</span>
+            </div>
+            <a href="/types/infp.html" class="link-underline compare-type-card__link">Open INFP page</a>
+          </article>
+
+          <span class="compare-heads__vs" aria-hidden="true">vs</span>
+
+          <article class="compare-type-card compare-type-card--b">
+            <span class="compare-type-card__badge">INFJ</span>
+            <h3 class="compare-type-card__name">The Advocate</h3>
+            <p class="compare-type-card__tagline">Visionary, private, driven by meaning</p>
+            <p class="compare-type-card__desc">INFJs lead with a powerful inner vision and a deep concern for the wellbeing of others. They combine idealism with a clear sense of direction.</p>
+            <div class="compare-type-card__stack" aria-label="INFJ primary stack">
+              <span class="stack-preview-item stack-dominant">Ni</span>
+              <span class="stack-preview-arrow" aria-hidden="true">→</span>
+              <span class="stack-preview-item stack-auxiliary">Fe</span>
+              <span class="stack-preview-arrow" aria-hidden="true">→</span>
+              <span class="stack-preview-item stack-tertiary">Ti</span>
+              <span class="stack-preview-arrow" aria-hidden="true">→</span>
+              <span class="stack-preview-item stack-inferior">Se</span>
+            </div>
+            <a href="/types/infj.html" class="link-underline compare-type-card__link">Open INFJ page</a>
+          </article>
+        </div>
+
+        <!-- ─── Function stack table ─────────────────── -->
+        <div class="compare-stack mt-3xl" role="region" aria-labelledby="stack-table-heading">
+          <h3 id="stack-table-heading" class="compare-stack__title">Function stacks, position by position</h3>
+          <p class="compare-stack__sub">Both types use all eight cognitive functions — what changes is the <strong>order</strong>. The order changes everything.</p>
+
+          <div class="compare-stack__table">
+
+            <div class="compare-stack__header" aria-hidden="true">
+              <span class="compare-stack__head-cell compare-stack__head-cell--a">INFP</span>
+              <span class="compare-stack__head-cell compare-stack__head-cell--pos">Position</span>
+              <span class="compare-stack__head-cell compare-stack__head-cell--b">INFJ</span>
+            </div>
+
+            <!-- Position 1 — Dominant -->
+            <div class="compare-stack__row">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Fi</span>
+                <span class="compare-stack__name">Introverted Feeling</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">1</span>
+                <span class="compare-stack__pos-role">Dominant</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Ni</span>
+                <span class="compare-stack__name">Introverted Intuition</span>
+              </div>
+            </div>
+
+            <!-- Position 2 — Auxiliary -->
+            <div class="compare-stack__row">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Ne</span>
+                <span class="compare-stack__name">Extraverted Intuition</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">2</span>
+                <span class="compare-stack__pos-role">Auxiliary</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Fe</span>
+                <span class="compare-stack__name">Extraverted Feeling</span>
+              </div>
+            </div>
+
+            <!-- Position 3 — Tertiary -->
+            <div class="compare-stack__row">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Si</span>
+                <span class="compare-stack__name">Introverted Sensing</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">3</span>
+                <span class="compare-stack__pos-role">Tertiary</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Ti</span>
+                <span class="compare-stack__name">Introverted Thinking</span>
+              </div>
+            </div>
+
+            <!-- Position 4 — Inferior -->
+            <div class="compare-stack__row">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Te</span>
+                <span class="compare-stack__name">Extraverted Thinking</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">4</span>
+                <span class="compare-stack__pos-role">Inferior</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Se</span>
+                <span class="compare-stack__name">Extraverted Sensing</span>
+              </div>
+            </div>
+
+            <!-- Shadow divider -->
+            <div class="compare-stack__divider" role="separator" aria-label="Shadow stack begins">
+              <span>Shadow stack</span>
+            </div>
+
+            <!-- Position 5 — Opposing -->
+            <div class="compare-stack__row compare-stack__row--shadow">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Fe</span>
+                <span class="compare-stack__name">Extraverted Feeling</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">5</span>
+                <span class="compare-stack__pos-role">Opposing</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Ne</span>
+                <span class="compare-stack__name">Extraverted Intuition</span>
+              </div>
+            </div>
+
+            <!-- Position 6 — Critical Parent -->
+            <div class="compare-stack__row compare-stack__row--shadow">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Ni</span>
+                <span class="compare-stack__name">Introverted Intuition</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">6</span>
+                <span class="compare-stack__pos-role">Critical Parent</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Fi</span>
+                <span class="compare-stack__name">Introverted Feeling</span>
+              </div>
+            </div>
+
+            <!-- Position 7 — Trickster -->
+            <div class="compare-stack__row compare-stack__row--shadow">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Se</span>
+                <span class="compare-stack__name">Extraverted Sensing</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">7</span>
+                <span class="compare-stack__pos-role">Trickster</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Te</span>
+                <span class="compare-stack__name">Extraverted Thinking</span>
+              </div>
+            </div>
+
+            <!-- Position 8 — Demon -->
+            <div class="compare-stack__row compare-stack__row--shadow">
+              <div class="compare-stack__cell compare-stack__cell--a">
+                <span class="compare-stack__code">Ti</span>
+                <span class="compare-stack__name">Introverted Thinking</span>
+              </div>
+              <div class="compare-stack__pos">
+                <span class="compare-stack__pos-num">8</span>
+                <span class="compare-stack__pos-role">Demon</span>
+              </div>
+              <div class="compare-stack__cell compare-stack__cell--b">
+                <span class="compare-stack__code">Si</span>
+                <span class="compare-stack__name">Introverted Sensing</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         Insights — what's shared, what's different
+         ════════════════════════════════════════════ -->
+    <section class="section section-bg-lilac compare-insights-section" aria-labelledby="insights-heading">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <span class="text-eyebrow">Read the stacks</span>
+          <h2 id="insights-heading">What the comparison actually tells you</h2>
+        </div>
+
+        <div class="compare-insights mt-2xl">
+
+          <article class="compare-insight compare-insight--shared">
+            <span class="compare-insight__kicker">What they share</span>
+            <h3 class="compare-insight__title">Both are introverted NF idealists</h3>
+            <p>Both lead with an inward-turned function, both prioritise feeling over thinking, and both filter the world through intuition rather than direct sensing. That overlap is real — and is exactly why the two types get mistaken for each other.</p>
+            <ul class="compare-insight__list">
+              <li>Quiet, deep, value-driven on first read</li>
+              <li>Both tire from over-stimulation and small talk</li>
+              <li>Both care more about meaning than metrics</li>
+            </ul>
+          </article>
+
+          <article class="compare-insight compare-insight--diff">
+            <span class="compare-insight__kicker">Where they split</span>
+            <h3 class="compare-insight__title">The dominant function is the whole story</h3>
+            <p>INFP leads with <strong>Fi</strong> — a private compass of personal values. INFJ leads with <strong>Ni</strong> — a synthesising vision that points at one likely future. Same vibe on the surface; different operating system underneath.</p>
+            <ul class="compare-insight__list">
+              <li><strong>INFP asks:</strong> "Does this match what I value?"</li>
+              <li><strong>INFJ asks:</strong> "Where is this heading?"</li>
+              <li>INFP branches outward (Ne) to explore many possibilities</li>
+              <li>INFJ converges inward (Ni) onto a single read</li>
+            </ul>
+          </article>
+
+          <article class="compare-insight compare-insight--stress">
+            <span class="compare-insight__kicker">Stress tells the truth</span>
+            <h3 class="compare-insight__title">Their inferior functions are opposites</h3>
+            <p>The fastest way to tell them apart is to watch them <em>under pressure</em>. The inferior function isn't subtle.</p>
+            <ul class="compare-insight__list">
+              <li><strong>INFP grips Te</strong> — sudden bluntness, control, "right vs wrong" rigidity</li>
+              <li><strong>INFJ grips Se</strong> — overindulgence in food, screens, shopping; physical fixation</li>
+            </ul>
+          </article>
+
+          <article class="compare-insight compare-insight--use">
+            <span class="compare-insight__kicker">How to use this</span>
+            <h3 class="compare-insight__title">If you're not sure which one you are</h3>
+            <p>Don't pick by trait list — both types will nod at the same descriptions. Pick by <strong>process</strong>:</p>
+            <ul class="compare-insight__list">
+              <li>Do you feel a value, then justify it? Likely <strong>Fi-dom (INFP)</strong>.</li>
+              <li>Do you "just know" before you can explain why? Likely <strong>Ni-dom (INFJ)</strong>.</li>
+              <li>Do you spin out into <em>many</em> possibilities? <strong>Ne</strong> — INFP territory.</li>
+              <li>Do you lock onto <em>one</em> read and resist alternatives? <strong>Ni</strong> — INFJ territory.</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         Often confused callout
+         ════════════════════════════════════════════ -->
+    <section class="section compare-confused-section" aria-labelledby="confused-heading">
+      <div class="container">
+
+        <div class="compare-confused">
+          <span class="compare-confused__kicker">Often confused</span>
+          <h2 id="confused-heading" class="compare-confused__title">INFP and INFJ are the most-mistyped pair on the internet</h2>
+          <p class="compare-confused__body">
+            Three of four letters match, the surface vibe is similar, and most online tests lean on dichotomies (I/E, N/S, F/T, J/P) instead of functions. So a soft-spoken, idealistic INFJ reads as INFP, and a quietly visionary INFP reads as INFJ. Function stacks cut through it. <strong>Lead with your dominant.</strong>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         CTA — try another or jump to type pages
+         ════════════════════════════════════════════ -->
+    <section class="section section-bg-lilac compare-final-cta" aria-labelledby="cta-heading">
+      <div class="container text-center">
+        <span class="text-eyebrow">Keep going</span>
+        <h2 id="cta-heading">Try another comparison or open a type page</h2>
+        <p class="section-lead">More pairs unlock as the remaining 14 type pages ship.</p>
+        <div class="compare-cta-buttons mt-xl">
+          <a href="#picker-heading" class="btn btn-primary">Pick another pair</a>
+          <a href="/explore.html" class="btn btn-outline">Browse all 16 types</a>
+        </div>
       </div>
     </section>
 
   </main>
 
+  <!-- Footer — static HTML; swap for <site-footer> after approval -->
   <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-col footer-col--brand">
@@ -88,5 +491,35 @@
     </div>
   </footer>
 
+  <script>
+    // Static-pass picker: prevent the same type being picked twice and
+    // smoothly scroll to the comparison panel on submit. The full
+    // dynamic swap-in lands when <compare-panel> ships.
+    (function () {
+      var form = document.querySelector('.compare-picker');
+      if (!form) return;
+      var a = form.querySelector('#type-a');
+      var b = form.querySelector('#type-b');
+
+      function syncDisable() {
+        if (!a || !b) return;
+        Array.prototype.forEach.call(b.options, function (opt) {
+          opt.disabled = (opt.value === a.value);
+        });
+        Array.prototype.forEach.call(a.options, function (opt) {
+          opt.disabled = (opt.value === b.value);
+        });
+      }
+      a && a.addEventListener('change', syncDisable);
+      b && b.addEventListener('change', syncDisable);
+      syncDisable();
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var target = document.getElementById('comparison');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+  </script>
 </body>
 </html>
